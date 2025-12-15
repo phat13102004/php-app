@@ -1,4 +1,4 @@
-name: Deploy PHP Hosting
+name: Deploy PHP to Somee
 
 on:
   push:
@@ -8,11 +8,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Deploy to Somee FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: 192.52.242.121
           username: ${{ secrets.FTP_USER }}
