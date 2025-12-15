@@ -11,10 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: FTP Deploy
+      - name: Deploy to Somee FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
-          server: ftp.TranTuanPhat.somee.com
+          server: 192.52.242.121
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          server-dir: /www/
+          server-dir: /www/TranTuanPhat.somee.com/
