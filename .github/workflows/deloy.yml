@@ -19,4 +19,4 @@ jobs:
           server: 192.52.242.121
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          server-dir: /www/TranTuanPhat.somee.com/
+          server-dir: /www/
